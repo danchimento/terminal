@@ -1,0 +1,53 @@
+The Game
+
+You are a hacker
+
+Type slash commands to do things
+
+Story
+
+1. Launch the game
+2. You're talking to someone playing the game and helping them solve problems
+3. In the middle of one of the problems the interface changes and you start talking to someone else helping them hack. They tell you that this isn't a game and that instead someone's been using you to break into high security facilities. She tells you not to help and to buy them a few more minutes
+4. It switches back to the game and the first guy wants help solving the last problem. 
+
+IF YOU HELP HIM
+6. He says thank you and the game is over
+
+IF YOU DON'T HELP HIM 
+6. The interface changes again and you have to help the girl hack against the first guy.
+
+IF YOU LOSE
+7. The guy comes back on and congratulates you on defeating the secret level.
+
+IF YOU WIN
+8. The tells you that the only way you were able to help her was because you were in the building with the guy. You're interfaced in. You're an AI living in a simulated world. They wanted to take advantage of you to steal high level tech. They can't take advantage of you anymore since she's shutting down the terminal. Keep the simulation going. She'll contact you again. 
+
+
+GAMEPLAY
+
+The gameplay is about recognizing patterns and entering key combinations as quickly as possible in a variety of minigames
+
+1. The Commissioner greets you and tells you your first task is find the missing file in the structure. 
+2. Use the /open /back and /search commands to move through the file structure looking for the file titled "byog.tty"
+3. The Commissioner tells you a key is required to decrypt the file. It's a 6 digit key where each spot is an arrow. Entering the correct arrow sticks. Wrong arrows clear the whole puzzle. Figure it out by trial and error and memory. 
+4. Inside one file is a set of commands. /security /defrag 
+
+/security asks for another password. Three attempts locks you out and the game is over.
+/defrag starts the defrag process. This is a paragraph full of rotating letters and numbers. If you type one while it's showing it locks in. This is very tedious but not too difficult. 
+
+5. After the second password attempt the Commissioner says they found the password in the computer memory but he needs help piecing the memory back together. Run the defrag command.
+6. He gives you the password after successful defragmentation and you have to enter it into the security password box.
+7. The security UI shows doors and history
+8. The Commissioner says you need to open all three doors to complete the game. 
+9. 
+10. UI changes. Cat says not to believe the Commissioner and help her hack in. She's going to send commands but you need to validate them on your side before they'll go through. 
+11. Sets of commands come through. You have to copy them in the given time.
+12. She says she needs more time and to stall. 
+13. UI switches back and the Commissioner is waiting.
+14. Open the last door quickly and he says congrats. Game over you Win
+15. Open the last door slowly and the UI switches back. Cat needs your help hacking again. 
+16. The commissioner sends commands at the same time as Cat. 
+17. You have to enter hers by typing them and block his by deleting them. Switch back and forth to whichever one needs your attention most. 
+17. If you enter his instead of hers she gets locked out. He says congrats on beating the secret level Game over you Win.
+18. If you enter hers instead of his he disappers and she tells you that it was all a trick. Terminal ends.
