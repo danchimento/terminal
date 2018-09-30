@@ -1,21 +1,26 @@
 import { Terminal } from "./terminal";
+import { Level1 } from "./level1";
+import { DELAY_LONG, DELAY_MEDIUM, DELAY_SHORT, DELAY_NONE } from "./constants"
 
 export default class Game {
 
     constructor(element) {
         this.terminal = new Terminal(element);
 
-        this.initialize();
+        this.start();
     }
 
-    async initialize() {
+    async start() {
         await this.terminal.addText("Initializing");
-        await this.terminal.addText("Opening connection at port 5561", 2000);
-        await this.terminal.addText("Connection open", 3000);
+        await this.terminal.addText("Opening connection at port 5561", DELAY_MEDIUM);
+        await this.terminal.addText("Connection open", DELAY_MEDIUM);
         await this.terminal.addNewLine();
         await this.terminal.addNewLine();
         await this.terminal.addNewLine();
-        await this.terminal.addText("Welcome to The Game.", 4000);
+
+        var level1 = new Level1(this.terminal);
+
+        await level1.start();
     }
     
 }

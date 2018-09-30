@@ -1,4 +1,5 @@
 import Typed from "typed.js";
+import { TERMINAL_TEXT_COLOR } from "./constants.js";
 
 export class Terminal {
 
@@ -14,8 +15,9 @@ export class Terminal {
         this.terminalElement.appendChild(textElement);
     }
 
-    async addText(text, delay, speed) {
+    async addText(text, delay, color, speed) {
         
+        var textColor = color ? color : "#FFF";
         var delayTime = delay ? delay : 0;
 
         var delay = (delayTime) => {
@@ -41,6 +43,7 @@ export class Terminal {
                 }
                 
                 var textElement = document.createElement("div");
+                textElement.style.color = textColor;
                 this.terminalElement.appendChild(textElement);
                 
                 new Typed(textElement, options);
