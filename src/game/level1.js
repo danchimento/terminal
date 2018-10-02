@@ -28,7 +28,6 @@ export class Level1 {
         await this.terminal.waitForUserCommand(command);
         var command = await this.messageFromCommissioner("colabinit", DELAY_LONG);
         await this.terminal.waitForUserCommand(command);
-
     }
     
 

@@ -1,9 +1,12 @@
 import Typed from "typed.js";
-import { TERMINAL_TEXT_COLOR, TYPE_SPEED } from "./constants.js";
+import { TERMINAL_TEXT_COLOR, TYPE_SPEED, TERMINAL_MODE_KEYPRESS, TERMINAL_MODE_RETURN } from "./constants.js";
 
 export class Terminal {
 
     constructor() {
+
+        this.mode = TERMINAL_MODE_RETURN;
+
         this.cursorElement = '<span id="cursor">_</span>';
         this.textElement = '<div>{{text}}</div>';
 
@@ -30,12 +33,13 @@ export class Terminal {
         inputContainer.appendChild(this.inputElement);
 
         this.contentElement = document.createElement("div");
-        this.contentElement.style.height = "200px";
+        this.contentElement.style.height = "375px";
         this.contentElement.style.overflowY = "hidden";
         this.contentElement.style.color = "white";
         this.contentElement.style.fontFamily = "Courier New, Courier, monospace";
         this.contentElement.style.lineHeight = "20px";
         this.contentElement.style.fontSize = "16px";
+        this.contentElement.onclick = () => this.inputElement.focus();
 
         this.terminalElement = document.createElement('terminal');
         this.terminalElement.style.background = "#111";
@@ -46,6 +50,7 @@ export class Terminal {
         this.terminalElement.style.padding = "20px";
         this.terminalElement.style.position = "relative";
         this.terminalElement.style.color = "white";
+        this.terminalElement.onclick = () => this.inputElement.focus();
 
         this.terminalElement.appendChild(inputContainer);
         this.terminalElement.appendChild(this.contentElement);
@@ -71,7 +76,12 @@ export class Terminal {
     }
 
     onInputKeyDown(e) {
-        if (e.keyCode == 13) {
+
+        if (this.mode == TERMINAL_MODE_KEYPRESS) {
+            this.userCommand == String.fromCharCode(e.which);
+        }
+
+        if (this.mode == TERMINAL_MODE_RETURN && e.keyCode == 13) {
             this.userCommand = this.inputElement.value;
             this.inputElement.value = '';
         }
@@ -118,7 +128,7 @@ export class Terminal {
                 }
                 
                 var textElement = document.createElement("div");
-                textElement.textContent = "asdf";
+                textElement.style.minHeight = "20px";
                 textElement.style.color = textColor;
                 this.addElementToTerminal(textElement);
                 
